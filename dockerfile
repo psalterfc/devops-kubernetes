@@ -1,7 +1,7 @@
-FROM centos/httpd-24-centos8
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page296/neogym.zip  /var/www/html/
-WORKDIR /var/www/html
-USER root
-RUN yum install -y unzip && unzip neogym.zip && rm neogym.zip 
+FROM ubuntu 
+RUN apt update 
+RUN apt install –y apache2 
+RUN apt install –y apache2-utils 
+RUN apt clean 
 EXPOSE 80
-CMD ["httpd", "-D", "FOREGROUND"]
+CMD [“apache2ctl”, “-D”, “FOREGROUND”]
