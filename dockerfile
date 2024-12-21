@@ -1,4 +1,3 @@
-#!/bin/bash
 FROM centos/httpd 
 ADD https://www.free.css.com.asstes/files/free-css-templates/download/page254/photogenic.zip  /var/www/html/
 WORKDIR /var/www/html
